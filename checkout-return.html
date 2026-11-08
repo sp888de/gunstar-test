@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Order confirmation — GUNSTAR</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/iptm1k0x/image/upload/demon_face.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <main class="section">
+    <div class="container">
+      <p class="eyebrow">GUNSTAR — TEST CHECKOUT</p>
+
+      <div role="status" aria-live="polite">
+        <h1 id="confirmation-title">VERIFYING PAYMENT</h1>
+        <p id="confirmation-message">
+          Waiting for payment confirmation.
+        </p>
+        <p id="confirmation-total"></p>
+      </div>
+
+      <button
+        type="button"
+        class="enquiry-btn"
+        id="confirmation-retry"
+        hidden
+      >
+        CHECK AGAIN
+      </button>
+
+      <p>
+        <a href="galerie.html">BACK TO ARCHIVE</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="assets/js/checkout-return.js"></script>
+</body>
+</html>

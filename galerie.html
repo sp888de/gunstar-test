@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — GUNSTAR</title>
+<meta name="description" content="GUNSTAR classified shop — mercenary, business and hacker divisions.">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/iptm1k0x/image/upload/demon_face.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=spacing-mobile-4">
+<style>
+.shop-group h2 {font: 600 .85rem var(--font-mono); text-transform: uppercase; letter-spacing: .12em; padding: 1rem 0; border-top: 1px solid var(--steel)}
+.shop-group + .shop-group {margin-top: clamp(2rem,5vw,4.5rem)}
+.shop-drop .catalog {grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(.6rem,2vw,1.5rem)}
+.shop-drop .catalog-item__media {aspect-ratio: 5/4}
+.shop-drop .catalog-item__caption {padding: .9rem 0}
+.shop-drop .name {font: 700 clamp(1rem,2vw,1.6rem) var(--font-body)}
+.shop-page .catalog-filters {flex-wrap: wrap; gap: .8rem 1.4rem}
+@media(max-width: 540px) {
+  .shop-drop .catalog-item__caption {align-items: flex-start; flex-direction: column}
+}
+@media (max-width: 680px) {
+  .shop-drop .catalog { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .shop-archive .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Upcoming drop: keep only a faint silhouette of each product. */
+.shop-drop .catalog-item .catalog-item__media img,
+.shop-drop .catalog-item .catalog-item__media video {
+  filter: grayscale(0) blur(10px) brightness(1);
+  opacity: .3;
+  transform: scale(1.15);
+  transition: none;
+}
+.shop-drop .catalog-item { cursor: default; }
+
+.shop-page .catalog-item,
+.shop-page .catalog-item__media {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.shop-page .catalog-item__media img,
+.shop-page .catalog-item__media video {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+<a href="index.html" class="brand">
+  <img
+    src="assets/img/etoile_blanche.png"
+    class="brand__logo-symbol"
+    alt="GUNSTAR"
+  >
+  <img
+    src="assets/img/bogo_blanc.png"
+    class="brand__logo-wordmark"
+    alt="GUNSTAR"
+  >
+</a>
+    <nav class="nav">
+      <a href="galerie.html" aria-current="page">Shop</a>
+      <a href="wallpaper.html">Wallpaper</a>
+      <a href="a-propos.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main class="section section--tight shop-page">
+  <div class="container">
+
+    <div class="catalog-head">
+      <div>
+        <h1 style="font-size:clamp(2.4rem,6vw,4rem);">Shop</h1>
+      </div>
+      <div class="catalog-filters" role="group" aria-label="Filter the shop">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="mercenary" aria-pressed="false">Mercenary</button>
+        <button type="button" data-filter="business" aria-pressed="false">Business man</button>
+        <button type="button" data-filter="hacker" aria-pressed="false">Hacker</button>
+      </div>
+    </div>
+
+    <section class="shop-group shop-drop">
+      <h2>Next drop</h2>
+      <div class="catalog">
+        <div class="catalog-item" data-category="mercenary" aria-disabled="true">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°10</span>
+          <img src="https://res.cloudinary.com/iptm1k0x/image/upload/29102026-RAW05810.jpg" alt="GUNSTAR gloves">
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">?? ?????</span>
+          <span class="type">Mercenary</span>
+        </div>
+      </div>
+        <div class="catalog-item" data-category="hacker" aria-disabled="true">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°09</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478590/usb_key.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">??? ????</span>
+          <span class="type">Hacker</span>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="shop-group shop-archive">
+      <h2>Archive — unavailable</h2>
+      <div class="catalog">
+        <a class="catalog-item reveal" data-category="introduction" href="product.html?item=01" aria-label="Open introduction">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°01</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478625/gunstarhomepage_2.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">0000</span>
+          <span class="type">INTRODUCTION</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="mercenary" href="product.html?item=02" aria-label="Open Mercenary file 1010">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°02</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478625/gunstarhomepage_2.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">SNIPER</span>
+          <span class="type">Mercenary</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="mercenary" href="product.html?item=03" aria-label="Open Mercenary file 1011">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°03</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478599/Mechagirl.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">MECHAGIRL</span>
+          <span class="type">Mercenary</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="business" href="product.html?item=04" aria-label="Open Business man file 1100">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°04</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478592/babytee.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">BOGO</span>
+          <span class="type">Business man</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="business" href="product.html?item=05" aria-label="Open Business man file 1101">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°05</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478625/gunstarhomepage_2.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">INSERT COIN</span>
+          <span class="type">Business man</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="mercenary" href="product.html?item=06" aria-label="Open mercenary file 10100">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°06</span>
+          <img src="https://res.cloudinary.com/iptm1k0x/image/upload/DSC07611.jpg">
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">DEMON</span>
+          <span class="type">Mercenary</span>
+        </div>
+      </a>
+        <a class="catalog-item reveal" data-category="hacker" href="product.html?item=08" aria-label="Open Hacker file 1000">
+        <div class="catalog-item__media">
+          <span class="catalog-item__index">N°08</span>
+          <video src="https://res.cloudinary.com/iptm1k0x/video/upload/v1793478596/stareye.mp4"
+                 autoplay muted loop playsinline
+                 preload="metadata"></video>
+        </div>
+        <div class="catalog-item__caption">
+          <span class="name">STARBOY</span>
+          <span class="type">Hacker</span>
+        </div>
+      </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="stripe" style="margin-bottom:2.5rem;"></div>
+    <div class="footer__bottom">
+      <span>© 2026 GUNSTAR. All rights reserved.</span>
+      <a href="contact.html">Contact us</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/products-data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+const shopFilters = document.querySelector('.catalog-filters');
+shopFilters.addEventListener('click', event => {
+  const selected = event.target.closest('button[data-filter]');
+  if (!selected) return;
+  const filter = selected.dataset.filter;
+  for (const button of shopFilters.querySelectorAll('button')) {
+    button.setAttribute('aria-pressed', String(button === selected));
+  }
+  for (const group of document.querySelectorAll('.shop-group')) {
+    for (const card of group.querySelectorAll('.catalog-item')) {
+      card.hidden = filter !== 'all' && card.dataset.category !== filter;
+    }
+    group.hidden = !group.querySelector('.catalog-item:not([hidden])');
+  }
+});
+</script>
+<script>
+(() => {
+  const shop = document.querySelector('.shop-page');
+  for (const media of shop.querySelectorAll('.catalog-item, .catalog-item__media img, .catalog-item__media video')) {
+    media.setAttribute('draggable', 'false');
+  }
+  function preventMediaAction(event) {
+    if (event.target.closest('.catalog-item')) {
+      event.preventDefault();
+    }
+  }
+  shop.addEventListener('dragstart', preventMediaAction);
+  shop.addEventListener('contextmenu', preventMediaAction);
+})();
+</script>
+</body>
+</html>

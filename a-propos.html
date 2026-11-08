@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About — GUNSTAR</title>
+  <meta
+    name="description"
+    content="About GUNSTAR — a classified system of clothing, images and digital artifacts."
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/iptm1k0x/image/upload/demon_face.png">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__inner">
+
+    <a href="index.html" class="brand">
+  <img
+    src="assets/img/etoile_blanche.png"
+    class="brand__logo-symbol"
+    alt="GUNSTAR"
+  >
+  <img
+    src="assets/img/bogo_blanc.png"
+    class="brand__logo-wordmark"
+    alt="GUNSTAR"
+  >
+</a>
+
+    <nav class="nav">
+      <a href="galerie.html">Shop</a>
+      <a href="wallpaper.html">Wallpaper</a>
+      <a href="a-propos.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="nav-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="catalog-head">
+      <div>
+        <p class="eyebrow">THE PROJECT</p>
+        <h1 style="font-size:clamp(2.4rem,6vw,4.4rem); margin-top:0.6rem;">
+          GUNSTAR IS <span style="color:#F08080;">NOT</span> A BRAND.
+        </h1>
+      </div>
+    </div>
+
+    <div class="split">
+
+      <div>
+        <p style="margin-top:1.5rem;">
+          GUNSTAR is a fictional system built around clothing,
+          images, characters and classified projects.
+          Every piece belongs to a larger structure.
+        </p>
+
+        <p>
+          The Shop is only the visible layer.
+          Behind it, three divisions operate independently:
+          Mercenary, Business man and Hacker.
+        </p>
+
+        <p>
+          Each division contains its own visual language,
+          its own rules and its own access protocol.
+        </p>
+
+        <p>
+          BE AWAKE. CHOOSE GUNSTAR.
+        </p>
+      </div>
+
+      <div class="gunstar-terminal" data-gunstar-terminal>
+        <div class="gunstar-terminal__bar">
+          <div class="gunstar-terminal__lights"><i></i><i></i><i></i></div>
+          <span>GUNSTAR // TERMINAL</span>
+          <span>NODE // 000</span>
+        </div>
+        <div class="gunstar-terminal__body">
+          <div class="gunstar-terminal__log" data-gunstar-log aria-live="polite"></div>
+          <form class="gunstar-terminal__row" data-gunstar-form>
+            <span>&gt;</span>
+            <input
+              type="text"
+              data-gunstar-input
+              autocomplete="off"
+              spellcheck="false"
+              maxlength="32"
+              placeholder="ENTER COMMAND"
+              aria-label="Commande terminal GUNSTAR"
+            >
+            <button type="submit" class="gunstar-terminal__run">RUN</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section section--tight">
+
+    <div class="container">
+
+      <div class="stripe"
+           style="margin-bottom:3rem;">
+      </div>
+
+      <div class="grid">
+
+        <article>
+          <h3>Mercenary</h3>
+
+          <p style="margin-top:1rem;">
+            Precision, movement and controlled impact.
+            Access is granted through the operative protocol.
+          </p>
+        </article>
+
+
+        <article>
+          <h3>Business man</h3>
+
+          <p style="margin-top:1rem;">
+            Influence, capital and private access.
+            The asset must be recovered through the exchange.
+          </p>
+        </article>
+
+
+        <article>
+          <h3>Hacker</h3>
+
+          <p style="margin-top:1rem;">
+            Signals, encrypted information and unauthorized
+            access. The shop must be breached.
+          </p>
+        </article>
+
+      </div>
+
+  </section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="stripe"
+         style="margin-bottom:2.5rem;">
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 GUNSTAR. All rights reserved.</span>
+      <a href="contact.html">Contact us</a>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="assets/js/products-data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

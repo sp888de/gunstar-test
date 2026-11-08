@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallpaper // System — GUNSTAR</title>
+<meta name="description" content="GUNSTAR visual archive — consult and retrieve classified wallpaper transmissions.">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/iptm1k0x/image/upload/demon_face.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/etoile_blanche.png" class="brand__logo-symbol" alt="GUNSTAR">
+      <img src="assets/img/bogo_blanc.png" class="brand__logo-wordmark" alt="GUNSTAR">
+    </a>
+    <nav class="nav">
+      <a href="galerie.html">Shop</a>
+      <a href="wallpaper.html" aria-current="page">Wallpaper</a>
+      <a href="a-propos.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main class="wallpaper-page" id="wallpaper-root">
+
+  <!-- ============ Intro screen ============ -->
+  <section class="wallpaper-intro" id="wallpaper-intro">
+    <p class="eyebrow">WALLPAPER // SYSTEM</p>
+    <h1 class="wallpaper-intro__title">WALLPAPER<br>FOR PERSONAL USE</h1>
+    <p class="wallpaper-intro__count" id="wallpaper-count"><!-- filled by JS --></p>
+
+    <button type="button" class="btn btn--solid" id="wallpaper-enter">ENTER ARCHIVE</button>
+
+    <div class="wallpaper-intro__status" id="wallpaper-status" hidden>
+      <p class="wallpaper-intro__status-text" id="wallpaper-status-text">INITIALIZING...</p>
+      <div class="wallpaper-progress"><div class="wallpaper-progress__bar" id="wallpaper-progress-bar"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ Main viewer ============ -->
+  <section class="wallpaper-viewer" id="wallpaper-viewer" hidden>
+
+    <div class="wallpaper-viewer__top">
+      <span class="wallpaper-viewer__file" id="wallpaper-file-counter">FILE 01 / 01</span>
+      <span class="wallpaper-viewer__signal">SIGNAL // ACTIVE</span>
+    </div>
+
+    <div class="wallpaper-frame" id="wallpaper-frame">
+      <img id="wallpaper-image" alt="">
+      <div class="wallpaper-scanline" id="wallpaper-scanline" hidden aria-hidden="true"></div>
+    </div>
+
+    <dl class="wallpaper-meta" id="wallpaper-meta"></dl>
+
+    <div class="wallpaper-scan">
+      <button type="button" class="wallpaper-scan__btn" id="wallpaper-scan-btn">
+        <span id="wallpaper-scan-label">HOLD TO SCAN</span>
+      </button>
+      <div class="wallpaper-scan__progress" id="wallpaper-scan-progress" hidden>
+        <div class="wallpaper-scan__track"><div class="wallpaper-scan__bar" id="wallpaper-scan-bar"></div></div>
+        <span class="wallpaper-scan__percent" id="wallpaper-scan-percent">0%</span>
+      </div>
+      <a class="btn btn--solid wallpaper-download" id="wallpaper-download" download hidden>DOWNLOAD WALLPAPER</a>
+    </div>
+
+    <nav class="wallpaper-nav">
+      <button type="button" class="wallpaper-nav__btn" id="wallpaper-prev" aria-label="Previous wallpaper">← PREVIOUS</button>
+      <span class="wallpaper-nav__counter" id="wallpaper-counter">01 / 01</span>
+      <button type="button" class="wallpaper-nav__btn" id="wallpaper-next" aria-label="Next wallpaper">NEXT →</button>
+    </nav>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="stripe" style="margin-bottom:2.5rem;"></div>
+    <div class="footer__bottom">
+      <span>© 2026 GUNSTAR. All rights reserved.</span>
+      <a href="contact.html">Contact us</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/products-data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/wallpapers-data.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

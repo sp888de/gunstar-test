@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Secure GUNSTAR checkout powered by Stripe.">
+  <title>Secure checkout — GUNSTAR</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://js.stripe.com" crossorigin>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="brand" aria-label="GUNSTAR home">
+        <img src="assets/img/etoile_blanche.png" class="brand__logo-symbol" alt="">
+        <img src="assets/img/bogo_blanc.png" class="brand__logo-wordmark" alt="GUNSTAR">
+      </a>
+      <nav class="nav"><a href="galerie.html">BACK TO SHOP</a></nav>
+    </div>
+  </header>
+  <main class="section section--tight gs-checkout-page">
+    <div class="container gs-checkout-container">
+      <div class="gs-checkout-heading">
+        <p class="eyebrow">GUNSTAR // SECURE PAYMENT</p>
+        <h1>CHECKOUT</h1>
+        <p>France métropolitaine only. Enter your delivery address directly in the secure Stripe form.</p>
+      </div>
+      <div id="gs-checkout-status" role="status" aria-live="polite">CONNECTING TO STRIPE…</div>
+      <div id="gs-stripe-checkout" aria-label="Secure Stripe payment form"></div>
+      <button type="button" class="gs-checkout-cancel" id="gs-checkout-cancel">CANCEL CHECKOUT / RETURN TO SHOP</button>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><div class="stripe"></div>
+    <div class="footer__bottom"><span>© 2026 GUNSTAR</span><span>SECURED BY STRIPE</span></div>
+  </div></footer>
+  <script src="https://js.stripe.com/endive/stripe.js"></script>
+  <script src="assets/js/checkout-embedded.js"></script>
+</body>
+</html>

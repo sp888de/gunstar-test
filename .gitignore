@@ -1,0 +1,8 @@
+private/
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.log
+.DS_Store
+__MACOSX/

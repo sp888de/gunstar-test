@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — GUNSTAR</title>
+<meta name="description" content="GUNSTAR product page — visuals, story and details behind each piece.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.product-info #product-title {margin:0 0 .8rem}
+.product-info .product-price {margin:0}
+#shipping-note {color:var(--bone-dim);font: .85rem var(--font-mono);margin:.35rem 0 0}
+#variant-field {border:0;padding:0;margin:1.6rem 0 0}
+#variant-field legend {margin-bottom:.55rem}
+#variant-options,.purchase-row,#quantity-control {display:flex;gap:.5rem}
+.product-info button {font-family:var(--font-mono);cursor:pointer}
+#variant-options button {min-width:3rem;min-height:44px;padding:0 .65rem;background:transparent;color:var(--bone);border:1px solid var(--steel)}
+#variant-options button[aria-pressed=true] {background:var(--bone);color:var(--black)}
+#variant-options button:disabled {opacity:.55;cursor:default;background:linear-gradient(to bottom right,transparent 49%,var(--steel) 50%,transparent 52%)}
+.purchase-row {margin:1.3rem 0;padding-bottom:1.5rem;border-bottom:1px solid var(--steel)}
+#quantity-control {align-items:center;background:var(--charcoal);gap:0}
+#quantity-control button {width:2.3rem;height:44px;background:transparent;color:inherit;border:0}
+#quantity-control button:disabled {opacity:.35}
+#units {min-width:2ch;text-align:center}
+#add-to-cart {flex:1;background:var(--bone);border:0;color:var(--black);min-height:46px}
+#add-to-cart:disabled {opacity:.5}
+#add-to-cart span {padding:.6rem}
+.product-info .product-description {margin:.7rem 0 1.2rem}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="brand">
+  <img
+    src="assets/img/etoile_blanche.png"
+    class="brand__logo-symbol"
+    alt="GUNSTAR"
+  >
+  <img
+    src="assets/img/bogo_blanc.png"
+    class="brand__logo-wordmark"
+    alt="GUNSTAR"
+  >
+</a>
+    <nav class="nav">
+      <a href="galerie.html" aria-current="page">Shop</a>
+      <a href="wallpaper.html">Wallpaper</a>
+      <a href="a-propos.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <div class="container">
+
+    <a class="product-back" href="galerie.html">← Back to shop</a>
+
+    <div class="product" id="product-root">
+
+      <!-- Gallery: thumbnails column + main media, filled in by initProductPage() -->
+      <div class="product-gallery">
+        <div class="product-gallery__thumbs" id="product-thumbs"></div>
+        <div class="product-gallery__main">
+          <span class="product-media__index" id="product-index">N°00</span>
+          <div id="product-media-slot"></div>
+        </div>
+      </div>
+
+      <!-- Info: title, description, accordion, filled in by initProductPage() -->
+      <div class="product-info">
+        <h1 id="product-title">Loading…</h1>
+        <p class="product-price" id="product-price" hidden></p>
+        <p id="shipping-note" hidden>Shipping calculated at checkout.</p>
+        <fieldset id="variant-field" hidden>
+          <legend id="variant-label">Size</legend>
+          <div id="variant-options"></div>
+        </fieldset>
+        <div class="purchase-row">
+          <div id="quantity-control" hidden>
+            <button type="button" id="less" aria-label="Decrease quantity">−</button>
+            <output id="units" aria-label="Quantity">1</output>
+            <button type="button" id="more" aria-label="Increase quantity">+</button>
+          </div>
+          <button type="button" id="add-to-cart" disabled><span class="enquiry-btn__label">BUY THIS ITEM</span></button>
+        </div>
+        <p class="eyebrow" id="product-category"></p>
+        <p class="product-description" id="product-description"></p>
+        <div class="product-accordion">
+          <details open>
+            <summary>Details</summary>
+            <dl class="product-details" id="product-details"></dl>
+          </details>
+          <details>
+            <summary>Delivery</summary>
+            <p id="product-delivery"></p>
+          </details>
+          <details>
+            <summary>Terms</summary>
+            <p id="product-terms"></p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="stripe" style="margin-bottom:2.5rem;"></div>
+    <div class="footer__bottom">
+      <span>© 2026 GUNSTAR. All rights reserved.</span>
+      <a href="contact.html">Contact us</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/products-data.js?v=shop2"></script>
+<script src="assets/js/cart.js?v=shop2"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
